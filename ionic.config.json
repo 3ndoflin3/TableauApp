@@ -1,0 +1,7 @@
+{
+  "name": "TableauApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
