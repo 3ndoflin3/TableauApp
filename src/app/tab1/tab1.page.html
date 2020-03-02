@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      EEA Sample App
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,32 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  <ion-grid>
+    <br>
+    <br>
+    <br>
+    
+    <ion-row>
+    
+      <ion-col col-6 *ngFor="let c of cards">
+          <ion-card >
+
+            <ion-card-header>
+              <p>{{c.title}}</p>
+              <img [src]="c.imageUri" alt="">
+            </ion-card-header>
+
+            <ion-card-content>
+              <p>{{c.description}}</p>
+            </ion-card-content>
+
+          </ion-card>
+      </ion-col><!-- END OF 2ND COL -->
+  
+    
+    
+<!--       <app-explore-container name="Tab page"></app-explore-container> --> 
+     </ion-row> <!-- END OF ROW -->
+
+  </ion-grid> <!-- END OF GRID LAYOUT -->
+</ion-content> <!-- END OF CONTENT -->

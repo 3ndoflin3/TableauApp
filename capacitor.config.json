@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "TableauApp",
+  "appName": "tableauApp",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

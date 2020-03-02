@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { cards } from '../app-routing.module';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,11 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  cards: Array<any>;
+  
+  constructor() {
+    this.cards = cards;
+    console.debug('TabsPage constructor %o', this.cards);
+  }
 
 }
