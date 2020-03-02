@@ -10,19 +10,22 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 export class Tab1Page {
 
   cards: Array<any>;
-  
+  selectedCard: any;
   constructor(private iab: InAppBrowser) {
     this.cards = cards;
     console.debug('TabsPage constructor %o', this.cards);
   }
 
+  seleccionarElemento(c){
+    this.selectedCard = c;
+  }
 
   openBlank(){
-    this.iab.create(this.cards[0].webViewUri, `_blank`);
+    this.iab.create(this.selectedCard.webViewUri, `_blank`);
   }
 
   openSystem(){
-    this.iab.create(this.cards[0].webViewUri, `_system`);
+    this.iab.create(this.selectedCard.webViewUri, `_self`, {location:'no'});
   }
 
 
