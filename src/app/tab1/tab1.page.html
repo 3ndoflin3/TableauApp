@@ -30,14 +30,18 @@
 
             <ion-card-content class = "card-description">
               <p>{{c.description}}</p>
+              
+              <div class ="button-container">
+                <ion-button (click)="openSystem()" expand="block" fill="clear" shape="round">
+                  Open here
+                </ion-button>
+                <ion-button (click)="openBlank()" expand="block" fill="clear" shape="round">
+                  Go out
+                </ion-button>
+              </div>
             </ion-card-content>
-
-            <ion-button (click)="openBlank()" expand="block" fill="clear" shape="round">
-              Go out
-            </ion-button>
-            <ion-button (click)="openSystem()" expand="block" fill="clear" shape="round">
-              Open here
-            </ion-button>
+            
+            
           </ion-card>
       </ion-col><!-- END OF 2ND COL -->
   

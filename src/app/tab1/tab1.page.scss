@@ -4,14 +4,18 @@ ion-content ion-toolbar {
 
 
 .card{
-  height: 45vh;
+  height: 75vh;
 }
 
 .card-description{
 
 }
 
+.button-container{
+  
+}
 
 .card{
-  
+  display: flex;
+  flex-direction: column;
 }
