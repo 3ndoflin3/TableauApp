@@ -21,7 +21,7 @@ export class Tab1Page {
   }
 
   openBlank(){
-    this.iab.create(this.selectedCard.webViewUri, `_blank`);
+    this.iab.create(this.selectedCard.webViewUri, `_blank`, {location:'no'});
   }
 
   openSystem(){
