@@ -55,6 +55,8 @@ export class Tab1Page implements OnInit{
       }
       if(this.platform.is('ios')){
         console.debug('Es ios');
+        this.iab.create(this.selectedCard.webViewUri, `_blank`, {location:'no'});
+
       }
       if(this.platform.is('cordova')){
         console.debug('Es cordova');
@@ -79,6 +81,8 @@ export class Tab1Page implements OnInit{
       }
       if(this.platform.is('ios')){
         console.debug('Es ios');
+        this.iab.create(this.selectedCard.webViewUri, `_self`, {toolbar:'yes'});
+
       }
       if(this.platform.is('cordova')){
         console.debug('Es cordova');

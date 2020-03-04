@@ -96,6 +96,8 @@ export class Tab3Page implements OnInit, OnDestroy{
       }
       if(this.platform.is('ios')){
         console.debug('Es ios');
+        Browser.open({toolbarColor: "#f4dc41", url: this.selectedCard.webViewUri})
+
       }
       if(this.platform.is('cordova')){
         console.debug('Es cordova');
@@ -124,6 +126,8 @@ export class Tab3Page implements OnInit, OnDestroy{
       }
       if(this.platform.is('ios')){
         console.debug('Es ios');
+        Browser.open({toolbarColor: "#f4dc41", url: this.cards[0].webViewUri});
+
       }
       if(this.platform.is('cordova')){
         console.debug('Es cordova');
