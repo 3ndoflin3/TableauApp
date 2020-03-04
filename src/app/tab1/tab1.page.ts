@@ -16,21 +16,24 @@ export class Tab1Page {
     this.cards = cards;
     console.debug('TabsPage constructor %o', this.cards);
     console.debug('Platform %o', platform.platforms);
-    if(platform.is('desktop')){
-      console.debug('Es desktop');
-    }
-    if(platform.is('ios')){
-      console.debug('Es ios');
-    }
-    if(platform.is('cordova')){
-      console.debug('Es cordova');
-    }
-    if(platform.is('mobile')){
-      console.debug('Es movil');
-    }
-    if(platform.is('android')){
-      console.debug('Es android');
-    }
+    
+    this.platform.ready().then(() => {
+      if(platform.is('desktop')){
+        console.debug('Es desktop');
+      }
+      if(platform.is('ios')){
+        console.debug('Es ios');
+      }
+      if(platform.is('cordova')){
+        console.debug('Es cordova');
+      }
+      if(platform.is('mobile')){
+        console.debug('Es movil');
+      }
+      if(platform.is('android')){
+        console.debug('Es android');
+      }
+    });
 
     
   }
