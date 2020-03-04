@@ -5,19 +5,16 @@ ion-content ion-toolbar {
 
 .card{
   display: flex;
-  align-items: center;
-  height: 75vh;
+  /* align-items: center; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 60vh;
 }
 
-.card-description{
+/* .card-description{
 
 }
 
 .button-container{
   
-}
-
-.card{
-  display: flex;
-  flex-direction: column;
-}
+} */
