@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import {Plugins} from '@capacitor/core';
 import { cards } from '../app-routing.module';
 import { Platform } from '@ionic/angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 const { Browser } = Plugins;
 
@@ -18,7 +19,7 @@ export class Tab3Page implements OnInit, OnDestroy{
   selectedCard: any;
 
 
-  constructor(public platform: Platform) {
+  constructor(private iab: InAppBrowser, public platform: Platform) {
     
     console.debug('TabsPage constructor %o', this.cards);
     console.debug('Platform %o', platform.platforms);    
@@ -137,8 +138,7 @@ export class Tab3Page implements OnInit, OnDestroy{
       }
       if(this.platform.is('android')){
         console.debug('Es android');
-        //this.iab.create(this.selectedCard.webViewUri, `_self`, {toolbar:'yes'});
-        Browser.open({toolbarColor: "#f4dc41", url: this.cards[0].webViewUri});
+        this.iab.create(this.selectedCard.webViewUri, `_self`, {toolbar:'yes'});
       }
     });
     
