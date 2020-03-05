@@ -43,7 +43,8 @@ export class Tab1Page implements OnInit{
     this.selectedCard = c;
   }
 
-  openBlank(){
+  openBlank(c){
+    this.seleccionarElemento(c);
     
     this.platform.ready().then(() => {
       if(this.platform.is('desktop')){
@@ -72,7 +73,8 @@ export class Tab1Page implements OnInit{
     });
   }
 
-  openSystem(){
+  openSystem(c){
+    this.seleccionarElemento(c);
     this.platform.ready().then(() => {
       if(this.platform.is('desktop')){
         console.debug('Es desktop');
