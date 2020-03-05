@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { InfotabPage } from './infotab/infotab.page';
 
 const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tab1/tab1.module').then(m => m.Tab1PageModule)
+  },
+  {
+    path: 'info',
+    loadChildren: () => import('./infotab/infotab.module').then(m => m.InfotabPageModule)
   }
 ];
 @NgModule({
