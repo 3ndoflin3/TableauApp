@@ -31,7 +31,7 @@ export class Tab1Page{
       if(this.platform.is('ios')){
         console.debug('Es ios');
         //Browser.open({toolbarColor: "#f4dc41", url: this.selectedCard.webViewUri });
-        this.iab.create(this.selectedCard.webViewUri, `_self`, {toolbar:'yes', hideurlbar: 'yes', usewkwebview: 'yes'});
+        this.iab.create(this.selectedCard.webViewUri, `_blank`, {toolbar:'yes', hideurlbar: 'yes', useuiwebview: 'yes'});
       }
 
       if(this.platform.is('android')){
