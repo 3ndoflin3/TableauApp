@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { cards } from '../app-routing.module';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { Platform } from '@ionic/angular';
-import {Plugins} from '@capacitor/core';
-const { Browser } = Plugins;
 
 
 @Component({
@@ -12,7 +10,6 @@ const { Browser } = Plugins;
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page{ 
-
 
   cards: Array<any>;
   selectedCard: any;
@@ -30,7 +27,6 @@ export class Tab1Page{
 
       if(this.platform.is('ios')){
         console.debug('Es ios');
-        //Browser.open({toolbarColor: "#f4dc41", url: this.selectedCard.webViewUri });
         this.iab.create(this.selectedCard.webViewUri, `_blank`, {toolbar:'yes', hideurlbar: 'yes', useuiwebview: 'yes'});
       }
 

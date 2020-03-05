@@ -1,13 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      EEA Sample App
+      <img src="../../assets/EEA-sample-app.png"/>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-<a href="/info" class="btn">Info</a>
+  <br>
+
+  <div class="info">
+    <a href="/info" class="">Info</a>
+  </div>
+
   <ion-grid>
     <br>
     <br>
@@ -15,6 +20,7 @@
     <ion-row>
     
       <ion-col col-6 *ngFor="let c of cards">
+
           <ion-card (click)="seleccionarElemento(c)"  class = "card">
 
             <ion-card-header class ="card-header">
@@ -32,8 +38,8 @@
               </div>
             </ion-card-content>
             
-            
           </ion-card>
+
       </ion-col><!-- END OF 2ND COL -->
   
     
